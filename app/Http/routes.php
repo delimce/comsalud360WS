@@ -14,3 +14,6 @@
 $app->get('/', function () use ($app) {
     return $app->welcome();
 });
+
+
+$app->get('testing/email', 'AppointController@sendEmail'); //probar correo

@@ -12,7 +12,7 @@ return [
     | Supported: "smtp", "mail", "sendmail", "mailgun", "mandrill", "ses", "log"
     |
     */
-    'driver' => env('MAIL_DRIVER', 'mailgun'),
+    'driver' => env('MAIL_DRIVER', 'sendmail'),
     /*
     |--------------------------------------------------------------------------
     | SMTP Host Address
@@ -45,7 +45,7 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
-    'from' => ['address' => 'no-reply@comsalud360.com', 'name' => 'comsalud 360'],
+    'from' => ['address' => 'no-reply@comsalud360.com', 'name' => 'Comsalud360'],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol
