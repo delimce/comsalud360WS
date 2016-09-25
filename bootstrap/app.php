@@ -63,9 +63,17 @@ $app->singleton(
 //     // Laravel\Lumen\Http\Middleware\VerifyCsrfToken::class,
 // ]);
 
+
+$app->middleware([
+    'Vluzrmos\LumenCors\CorsMiddleware'
+]);
+
 // $app->routeMiddleware([
 
 // ]);
+
+
+
 
 /*
 |--------------------------------------------------------------------------
