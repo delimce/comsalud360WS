@@ -12,17 +12,22 @@ use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Mail;
 
 
-class AppointController extends BaseController
+class RegisterController extends BaseController
 {
 
 
     public function sendEmail()
     {
-        Mail::send('mail.registered', [], function ($m) {
+        Mail::send('mail.test', [], function ($m) {
 
 
             $m->to("delimce@gmail.com", "luis de lima")->subject('Prueba de correo');
         });
+    }
+
+
+    public function test(){
+        return view("mail.registered");
     }
 
 }

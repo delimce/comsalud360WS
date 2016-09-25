@@ -17,3 +17,5 @@ $app->get('/', function () use ($app) {
 
 
 $app->get('testing/email', 'AppointController@sendEmail'); //probar correo
+
+$app->get('goTo/register','RegisterController@test');
