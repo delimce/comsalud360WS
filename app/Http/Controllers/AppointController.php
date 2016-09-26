@@ -8,9 +8,9 @@
  */
 namespace App\Http\Controllers;
 
-use Laravel\Lumen\Routing\Controller as BaseController;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use Laravel\Lumen\Routing\Controller as BaseController;
 
 
 class AppointController extends BaseController
@@ -27,8 +27,8 @@ class AppointController extends BaseController
     }
 
 
-
-    public function makeAppointment(Request $req){
+    public function makeAppointment(Request $req)
+    {
 
         $person = $req->persona;
         $appoint = $req->solicitud;
@@ -37,13 +37,13 @@ class AppointController extends BaseController
 
 
         /////medical request
-        foreach ($appoint as $aa){
-            $request1[] =  $aa["doc"];
+        foreach ($appoint as $aa) {
+            $request1[] = $aa["doc"];
         }
 
 
         $email = $person["email"];
-        $fullName = $person["nombre"].' '.$person["apellido"];
+        $fullName = $person["nombre"] . ' ' . $person["apellido"];
 
         $data = array(
             'name' => $fullName,
@@ -51,14 +51,41 @@ class AppointController extends BaseController
         );
 
 
-        Mail::send('mail.appointment', $data, function ($m)  use ($email,$fullName)  {
+        Mail::send('mail.appointment', $data, function ($m) use ($email, $fullName) {
 
             $m->to($email, $fullName)->subject('Registro de Citas en comSalud360App');
+        });
+
+
+    }
+
+
+    public function changeStatus(Request $req)
+    {
+
+
+        $person = $req->persona;
+        $event = $req->evento;
+
+        $email = $person["email"];
+        $fullName = $person["nombre"] . ' ' . $person["apellido"];
+
+        $data = array(
+            'name' => $fullName,
+            'status' => ($event["estatus_id"] == 2) ? 'Confirmada' : 'Cancelada',
+            'medical' => $event
+        );
+
+
+        Mail::send('mail.appointChange', $data, function ($m) use ($email, $fullName) {
+
+            $m->to($email, $fullName)->subject('Actualizacion de Estatus de Cita en comSalud360App');
         });
 
 
 
 
     }
+
 
 }

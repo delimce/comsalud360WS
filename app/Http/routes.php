@@ -21,3 +21,5 @@ $app->get('testing/email', 'AppointController@sendEmail'); //probar correo
 $app->post('init/register','RegisterController@register');
 
 $app->post('appointment/new','AppointController@makeAppointment');
+
+$app->post('appointment/status','AppointController@changeStatus');
