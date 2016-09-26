@@ -15,7 +15,7 @@
                 <span style="font-weight: bold">Fecha de la Cita:</span>&nbsp;<span>{{$medical["fecha"]}}</span><br>
                 <span>{{$medical["pds"]}}</span><br>
                 <span>{{$medical["localidad"]}}</span><br>
-                <span>Estatus de la cita: <b>{!! $status !!}</b></span>
+                <span>Estatus de la cita: <b style="color: @if ($medical["estatus_id"] === 2) green @else  red @endif ">{!! $status !!}</b></span>
 
             </div>
 

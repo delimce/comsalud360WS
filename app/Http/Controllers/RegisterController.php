@@ -22,7 +22,7 @@ class RegisterController extends BaseController
 
 
         $email = $req->email;
-        $fullName = $req->nombre.' '.$req->apellido;
+        $fullName = $req->nombre.' '.$req->nombre2.' '.$req->apellido.' '.$req->apellido2;
 
         $data = array(
             'name' => $fullName,
