@@ -4,14 +4,9 @@
 @section('content')
 
     <div style="text-align: justify; padding: 30px">
-        {{--
-         Bienvenid@ {!! $nombre !!} ha sido creada una cuenta en el sitio, para gestión de sus avisos en línea.
-         <p>Su nueva clave de acceso es: <strong>{!! $clave !!}</strong> pronto podrá visitarnos.</p>
-
-       --}}
 
         <div style="margin: auto; width: 650px">
-            <b>Estimad@ Usuario:</b> Nombre y Apellido <br>
+            <b>Estimad@ Usuario:</b> {!! $name !!} <br>
 
             Le hacemos llegar la más cordial Bienvenida a Nuestra Plataforma <b>comsalud360App</b> tu comunidad de Salud
             al Alcance de tu mano.
@@ -21,6 +16,11 @@
             <br><br>
 
             Contamos desde ya con su participación!!
+
+            <p>&nbsp;</p>
+
+            {{--<a class="waves-effect blue-grey btn">Activar</a>--}}
+
         </div>
 
 

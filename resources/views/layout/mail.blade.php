@@ -2,6 +2,8 @@
 <html lang="es-ES">
 <head>
     <meta charset="utf-8">
+    {!! Html::style('css/materialize.min.css') !!}
+
 </head>
 <body style="padding-top: 20px">
 
@@ -23,5 +25,6 @@
     Este es un correo automatizado. Si recibiste este correo por error, no es necesario que hagas nada.
 </div>
 
+{!! Html::script('js/materialize.min.js') !!}
 </body>
 </html>

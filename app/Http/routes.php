@@ -18,4 +18,4 @@ $app->get('/', function () use ($app) {
 
 $app->get('testing/email', 'AppointController@sendEmail'); //probar correo
 
-$app->get('goTo/register','RegisterController@test');
+$app->post('init/register','RegisterController@register');
