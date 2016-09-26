@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
 
 
 class AppointController extends BaseController
@@ -23,6 +24,41 @@ class AppointController extends BaseController
 
             $m->to("delimce@gmail.com", "luis de lima")->subject('Prueba de correo');
         });
+    }
+
+
+
+    public function makeAppointment(Request $req){
+
+        $person = $req->persona;
+        $appoint = $req->solicitud;
+
+        $request1 = array();
+
+
+        /////medical request
+        foreach ($appoint as $aa){
+            $request1[] =  $aa["doc"];
+        }
+
+
+        $email = $person["email"];
+        $fullName = $person["nombre"].' '.$person["apellido"];
+
+        $data = array(
+            'name' => $fullName,
+            'medical' => $request1
+        );
+
+
+        Mail::send('mail.appointment', $data, function ($m)  use ($email,$fullName)  {
+
+            $m->to($email, $fullName)->subject('Registro de Citas en comSalud360App');
+        });
+
+
+
+
     }
 
 }

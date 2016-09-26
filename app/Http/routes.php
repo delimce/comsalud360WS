@@ -19,3 +19,5 @@ $app->get('/', function () use ($app) {
 $app->get('testing/email', 'AppointController@sendEmail'); //probar correo
 
 $app->post('init/register','RegisterController@register');
+
+$app->post('appointment/new','AppointController@makeAppointment');

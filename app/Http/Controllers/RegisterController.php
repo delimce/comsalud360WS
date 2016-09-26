@@ -16,15 +16,6 @@ class RegisterController extends BaseController
 {
 
 
-    public function sendEmail()
-    {
-        Mail::send('mail.test', [], function ($m) {
-
-
-            $m->to("delimce@gmail.com", "luis de lima")->subject('Prueba de correo');
-        });
-    }
-
 
     public function register(Request $req){
 
@@ -40,8 +31,10 @@ class RegisterController extends BaseController
         Mail::send('mail.registered', $data, function ($m)  use ($email,$fullName)  {
 
 
-            $m->to($email, $fullName)->subject('Gracias por Registrarse en Comsalud360');
+            $m->to($email, $fullName)->subject('Gracias por Registrarse en DemoComsalud360App');
         });
+
+
 
     }
 
