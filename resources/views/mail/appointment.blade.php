@@ -16,7 +16,7 @@
                     <span style="font-weight: bold">Fecha de la Cita:</span>&nbsp;<span>{{$appoint["oferta_horario"]}}</span><br>
                     <span>{{$appoint["medico_nombre"]}}</span><br>
                     <span>{{$appoint["oferta_localidad"]}}</span><br>
-                    <span>Estatus de la cita: <b style="color: yellow">Por confirmar</b></span>
+                    <span>Estatus de la cita: <b style="color: #f4b400">Por confirmar</b></span>
 
                 </div>
             @endforeach

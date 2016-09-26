@@ -8,7 +8,7 @@
         <div style="margin: auto; width: 650px">
             <b>Estimad@ Usuario:</b> {!! $name !!} <br>
 
-            Gracias por Utilizar nuestros Canales Electronicos <br>
+            Gracias por Utilizar nuestros Canales Electrónicos <br>
             Le Informamos que su cita cambio de Estatus quedo actualizado el día {{date("d-m-Y")}}<br>
 
             <div style="padding: 12px">

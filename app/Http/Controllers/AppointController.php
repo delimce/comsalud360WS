@@ -43,7 +43,7 @@ class AppointController extends BaseController
 
 
         $email = $person["email"];
-        $fullName = $person["nombre"] . ' ' . $person["apellido"];
+        $fullName = $person["nombre"] . ' ' . $person["nombre2"] . ' ' . $person["apellido"] . ' ' . $person["apellido2"];
 
         $data = array(
             'name' => $fullName,
@@ -68,7 +68,7 @@ class AppointController extends BaseController
         $event = $req->evento;
 
         $email = $person["email"];
-        $fullName = $person["nombre"] . ' ' . $person["apellido"];
+        $fullName = $person["nombre"] . ' ' . $person["nombre2"] . ' ' . $person["apellido"] . ' ' . $person["apellido2"];
 
         $data = array(
             'name' => $fullName,
@@ -81,8 +81,6 @@ class AppointController extends BaseController
 
             $m->to($email, $fullName)->subject('Actualizacion de Estatus de Cita en comSalud360App');
         });
-
-
 
 
     }
