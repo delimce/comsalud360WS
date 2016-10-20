@@ -45,7 +45,7 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
-    'from' => ['address' => 'no-reply@comsalud360.com', 'name' => 'comSalud360App'],
+    'from' => ['address' => 'no-reply@comsalud360.com', 'name' => 'ComSalud360App'],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

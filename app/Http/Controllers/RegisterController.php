@@ -26,6 +26,7 @@ class RegisterController extends BaseController
 
         $data = array(
             'name' => $fullName,
+            'welcome'=>true
         );
 
         Mail::send('mail.registered', $data, function ($m)  use ($email,$fullName)  {

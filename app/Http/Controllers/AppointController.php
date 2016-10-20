@@ -53,7 +53,7 @@ class AppointController extends BaseController
 
         Mail::send('mail.appointment', $data, function ($m) use ($email, $fullName) {
 
-            $m->to($email, $fullName)->subject('Registro de Citas en comSalud360App');
+            $m->to($email, $fullName)->subject('Registro de Citas en ComSalud360App');
         });
 
 
@@ -79,7 +79,7 @@ class AppointController extends BaseController
 
         Mail::send('mail.appointChange', $data, function ($m) use ($email, $fullName) {
 
-            $m->to($email, $fullName)->subject('Actualizacion de Estatus de Cita en comSalud360App');
+            $m->to($email, $fullName)->subject('Actualizacion de Estatus de Cita en ComSalud360App');
         });
 
 

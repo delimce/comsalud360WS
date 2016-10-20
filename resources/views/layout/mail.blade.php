@@ -10,9 +10,14 @@
 <div style="text-align: center; ">
     {!! HTML::image('img/logo-comsalud-welcome1.png') !!}
     <br>
-    <span style="font-size: 25px; color: darkblue">
+
+    @if(isset($welcome))
+        <span style="font-size: 25px; color: darkblue">
         ¡Bienvenido a Comsalud 360 App!
     </span>
+    @endif
+
+
 </div>
 
 
