@@ -38,7 +38,8 @@ class AppointController extends BaseController
 
         /////medical request
         foreach ($appoint as $aa) {
-            $request1[] = $aa["doc"];
+          //  $request1[] = $aa["doc"];
+            $request1[] = $aa;
         }
 
 
