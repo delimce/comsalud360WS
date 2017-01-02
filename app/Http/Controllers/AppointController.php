@@ -44,7 +44,7 @@ class AppointController extends BaseController
 
 
         $email = $person["email"];
-        $fullName = $person["nombre"] . ' ' . $person["nombre2"] . ' ' . $person["apellido"] . ' ' . $person["apellido2"];
+        $fullName = $person["nombre"] . ' ' . $person["apellido"];
 
         $data = array(
             'name' => $fullName,
